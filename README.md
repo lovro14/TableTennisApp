@@ -22,8 +22,7 @@ This is Full Stack implementation for table tennis application
 
 ## Setting environment
 * Start MongoDB on port 27017
- ```
- * Edit ```.env``` file, specify your development or production MongoDB URI. If nothing is specified application will try to connect to MongoDB on localhost on port 27017. Also if you want to run application in production mode set ```NODE_ENV``` value in ```.env``` file to **production**. If you specify **production** environment application will try to connect to production MongoDB URI specified in ```.env``` file, otherwise application will try to connect to development MongoDB URI specified in ```.env```.
+* Edit ```.env``` file, specify your development or production MongoDB URI. If nothing is specified application will try to connect to MongoDB on localhost on port 27017. Also if you want to run application in production mode set ```NODE_ENV``` value in ```.env``` file to **production**. If you specify **production** environment application will try to connect to production MongoDB URI specified in ```.env``` file, otherwise application will try to connect to development MongoDB URI specified in ```.env```.
  
 ## Running application
 ```
@@ -33,7 +32,6 @@ npm install
 #Install client packages
 npm run client-install
 
-```
 #Start server and client using concurrently
 npm run dev
 ```
