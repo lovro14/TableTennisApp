@@ -64,7 +64,7 @@ class Match extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4 text-center">Choosen Match</h1>
+              <h1 className="display-4 text-center">Selected Match</h1>
               {matchDetailsContent}
               <br />
               <hr />

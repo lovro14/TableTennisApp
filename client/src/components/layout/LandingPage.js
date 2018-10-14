@@ -14,13 +14,13 @@ const LandingPage = () => (
               Players
             </Link>
             <Link to="/add-player" className="btn btn-lg btn-info mr-2">
-              Add player
+              Add Player
             </Link>
             <Link to="/matches" className="btn btn-lg btn-info mr-2">
               Matches
             </Link>
             <Link to="/add-match" className="btn btn-lg btn-info mr-2">
-              Add match
+              Add Match
             </Link>
           </div>
         </div>
