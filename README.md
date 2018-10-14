@@ -15,7 +15,7 @@ This is Full Stack implementation for table tennis application
   * Add matches
   * See all matches
   * See match's details
-  * See head 2 head score and history matches between 2 users
+  * See head 2 head score and history matches between 2 players
   * See rankings by number of wins
   * See rankings by number of won sets
   * See rankings by number of won points
