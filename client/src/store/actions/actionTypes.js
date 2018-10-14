@@ -1,0 +1,10 @@
+export const SET_ERRORS = "SET_ERRORS";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
+
+export const SET_PLAYERS_LOADING = "SET_PLAYERS_LOADING";
+export const GET_PLAYERS = "GET_PLAYERS";
+export const GET_PLAYER = "GET_PLAYER";
+
+export const GET_MATCHES = "GET_MATCHES";
+export const SET_MATCHES_LOADING = "SET_MATCHES_LOADING";
+export const MATCH_DETAILS = "MATCH_DETAILS";
