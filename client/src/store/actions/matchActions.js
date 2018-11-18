@@ -2,62 +2,56 @@ import {
   SET_MATCHES_LOADING,
   GET_MATCHES,
   SET_ERRORS,
-  MATCH_DETAILS
+  MATCH_DETAILS,
+  FETCH_MATCHES_SAGA,
+  FETCH_MATCH_SAGA,
+  ADD_MATCH_SAGA
 } from "./actionTypes";
-import { axiosInstance } from "../../custom-axios";
 
-const setLoading = () => {
+export const setMatchLoading = () => {
   return {
     type: SET_MATCHES_LOADING
   };
 };
 
-const getMatches = matches => {
+export const getMatches = matches => {
   return {
     type: GET_MATCHES,
     payload: matches
   };
 };
 
-export const fetchMatches = () => async dispatch => {
-  try {
-    dispatch(setLoading());
-    const res = await axiosInstance.get("/api/matches");
-    dispatch(getMatches(res.data.reverse()));
-  } catch (err) {
-    console.log(err);
-  }
+export const fetchMatches = () => {
+  return {
+    type: FETCH_MATCHES_SAGA
+  };
 };
 
-const setErrors = err => {
+export const setMatchErrors = err => {
   return {
     type: SET_ERRORS,
     payload: err
   };
 };
 
-export const addNewMatch = (matchData, history) => async dispatch => {
-  try {
-    await axiosInstance.post("/api/matches", matchData);
-    history.push("/matches");
-  } catch (err) {
-    dispatch(setErrors(err.response.data));
-  }
+export const addNewMatch = (matchData, history) => {
+  return {
+    type: ADD_MATCH_SAGA,
+    history: history,
+    matchData: matchData
+  };
 };
 
-const getMatchData = matchData => {
+export const getMatchData = matchData => {
   return {
     type: MATCH_DETAILS,
     payload: matchData
   };
 };
 
-export const fetchMatch = matchId => async dispatch => {
-  try {
-    dispatch(setLoading());
-    const res = await axiosInstance.get(`/api/matches/${matchId}`);
-    dispatch(getMatchData(res.data));
-  } catch (err) {
-    console.log(err);
-  }
+export const fetchMatch = matchId => {
+  return {
+    type: FETCH_MATCH_SAGA,
+    matchId: matchId
+  };
 };

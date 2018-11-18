@@ -2,7 +2,19 @@ export {
   fetchPlayers,
   fetchPlayer,
   addPlayer,
-  getRankings
+  getRankings,
+  setLoading,
+  getPlayers,
+  getPlayer,
+  setErrors
 } from "./playerActions";
 
-export { fetchMatches, addNewMatch, fetchMatch } from "./matchActions";
+export {
+  fetchMatches,
+  addNewMatch,
+  fetchMatch,
+  setMatchLoading,
+  getMatches,
+  getMatchData,
+  setMatchErrors
+} from "./matchActions";
